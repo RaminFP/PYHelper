@@ -12,7 +12,6 @@ Base.query = session.query_property()
 
 def AddUsers():
 
-
     user1 = User(name="ramin",email="ramin.blackhat@gmail.com",about_me="i am programmer",address="babol")
     user2 = User(name="reza",email="ramin.black@gmail.com",about_me="i am programmer",address="babol")
     user3 = User(name="mehdi",email="ramin.hat@gmail.com",about_me="i am programmer",address="babol")
@@ -28,8 +27,11 @@ def JsonUser():
     if error:
         print "you get error : %s " % error
     else:
-        for item in data:
-            print item
+
+        print data
+        from marshmallow_sqlalchemy.fields import get_primary_keys
+        prim_key =  get_primary_keys(User)
+        print prim_key
 
 
 def main():

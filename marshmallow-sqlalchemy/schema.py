@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import marshmallow as ma
 from marshmallow.compat import with_metaclass, iteritems
-
 from .convert import ModelConverter
 from .fields import get_primary_keys
 
@@ -96,6 +95,7 @@ class ModelSchemaMeta(SchemaMeta):
         return dict_cls()
 
 class TableSchema(with_metaclass(TableSchemaMeta, ma.Schema)):
+
     """Base class for SQLAlchemy model-based Schemas.
 
     Example: ::
@@ -113,6 +113,7 @@ class TableSchema(with_metaclass(TableSchemaMeta, ma.Schema)):
         user = engine.execute(select).fetchone()
         serialized = schema.dump(user).data
     """
+
     OPTIONS_CLASS = TableSchemaOpts
 
 class ModelSchema(with_metaclass(ModelSchemaMeta, ma.Schema)):

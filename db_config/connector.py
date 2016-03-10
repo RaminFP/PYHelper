@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from db_config.config import MySQLDB
-
+from db_config.config import PostgreSQL
 
 class ConnectorDB():
 
@@ -13,7 +12,8 @@ class ConnectorDB():
 
     def ConnectPostgreSQL(self):
 
-            self.engine = create_engine('postgresql://%s:%s@%s/%s', echo=True)
+            con = 'postgresql://{}:{}@{}:{}/{}'.format(PostgreSQL().USER,PostgreSQL().PASSWORD,PostgreSQL().HOST,PostgreSQL().PORT,PostgreSQL().DATABASE)
+            self.engine = create_engine(con, echo=True)
             return  self.engine
 
     def ConnectSqlite(self):

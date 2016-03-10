@@ -1,5 +1,5 @@
 from sqlalchemy import Table, MetaData, Column, Integer, String, DateTime, ForeignKey
-from sqlalchemy.orm import scoped_session, sessionmaker, relationship, backref
+from sqlalchemy.orm import scoped_session, relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 from db_config.connector import ConnectorDB
 
@@ -7,9 +7,11 @@ from db_config.connector import ConnectorDB
 metadata = MetaData(ConnectorDB().ConnectMySQL())
 Base = declarative_base(metadata=metadata)
 
-
-
-
+'''
+    Class :Name : User
+    Tabel :Name : tbUser
+    Relation    : None
+'''
 
 class User(Base):
 
