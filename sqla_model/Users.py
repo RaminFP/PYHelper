@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 from sqlalchemy import Table, MetaData, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import scoped_session, relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 from db_config.connector import ConnectorDB
-
+from db_config.config import CONNECTOR
 
 metadata = MetaData(ConnectorDB().ConnectMySQL())
 Base = declarative_base(metadata=metadata)
@@ -23,6 +24,7 @@ class User(Base):
     about_me = Column(String(140))
     address = Column(String(150))
 
-metadata.create_all(ConnectorDB().ConnectMySQL())
+if CONNECTOR:
+    metadata.create_all(ConnectorDB().ConnectMySQL())
 
 

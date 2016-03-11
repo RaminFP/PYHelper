@@ -1,0 +1,8 @@
+Django==1.9.3
+SQLAlchemy
+bleach
+marshmallow-sqlalchemy
+Crypto
+passlib
+khayyam
+marshmallow

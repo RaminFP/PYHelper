@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 '''
 
     ## Database Connection Information
@@ -11,6 +11,10 @@
 
 '''
 
+MySQL = True
+PostgreSQL = False
+
+CONNECTOR = True
 
 class MySQLDB:
 

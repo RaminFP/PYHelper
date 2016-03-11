@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/serializer_sqlalchemy.iml" filepath="$PROJECT_DIR$/.idea/serializer_sqlalchemy.iml" />
+      <module fileurl="file://D:/Github Project/PYHelper/.idea/PYHelper.iml" filepath="D:/Github Project/PYHelper/.idea/PYHelper.iml" />
     </modules>
   </component>
 </project>
