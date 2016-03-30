@@ -22,4 +22,20 @@ class XSS(object):
         else:
             self.Flag = True
             return self.Flag
+'''
+   Remote Code Execution  Avoid
+'''
+
+
+class RCE(object):
+
+    def avoidRCE(self,pgetParameter):
+
+        self.is_check = pgetParameter
+        self.Flag = False
+        if re.findall(";|\$\(|\|\||&&",self.is_check):
+            return self.Flag
+        else:
+            self.Flag = True
+            return self.Flag
 
