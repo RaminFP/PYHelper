@@ -18,7 +18,11 @@ Serializer SQLAl Model : [Serializer class ](https://github.com/RaminFP/PYHelper
 
 
 ### SQLAlchemy 
+<<<<<<< HEAD
 SQLAl Model : [SQLAlchemy class ](https://github.com/RaminFP/PYHelper/tree/master/sqla_model) 
+=======
+Serializer SQLAl Model : [SQLAlchemy class ](https://github.com/RaminFP/PYHelper/tree/master/sqla_model) 
+>>>>>>> 67c37ea7f28d8e62fb78fc3ef572be81db832731
 
 
 ``` 
